@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    background: url(cintaku_6.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.Name {
+    display: inline-block;
+    color: black;
+    padding-top: 50px;
+    min-height: 300px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* 
+
+TO DO! div name max height weg, margin dazu.
+div banner mergin dazu, bzw min height
+nav menüleiste ggf eine margin geben
+
+*/
+
+
+ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+li {
+    display: inline-block;
+    color: black;
+}
+
+li a {
+    margin: 25px;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+    display: block;
+      /* because its an inline item we need to give it a block element to be able to access the changeability */
+}
+
+li a:hover {
+    color: lightblue;
+}
+
+.banner {
+    text-align: center;
+    padding: 100px 0;
+    width: 100%;
+}
+
+section img {
+    max-width: 30%;
+    height:fit-content;
+}
+
+.abschnitt {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px 100px 50px;
+}
+
+section {
+    margin: 25px;
+    padding: 25px 25px;
+}
+
+.bildRechts {
+    background-color: bisque;
+}
+
+section h2 {
+    margin-left: 50px;
+}
+
+.bildLinks p {
+    padding-left: 30px;
+}
+
+.bildRechts p {
+    padding-right: 30px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    width: calc(100%-50px);
+    margin: 25px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 16px;
+} 
+
+.contactForm {
+    margin: 50px auto;
+}
+
+.contactForm h1 {
+    margin-bottom: 50px;
+}
+
+label {
+    text-align: left;
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 5px;
+    margin-right: 80px;
+}
+
+/* next the input boxes box model: limited the size of wrap area, then created padding inside of it and edited the space on the side. */
+
+input {
+    width: 30%;  /* Size is restricted, so we use 100%  */
+    margin-bottom: 20px;
+    padding: 10px; /* it adds up to 20px in each direction */
+    border: 1px, solid, #8f8f8f;
+    border-radius: 5px; 
+}
+
+.message text {
+    padding: 40px;
+}
+
+button {
+    background: coral;
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    width: 10%;
+    text-transform: uppercase;
+   /* text-BLA  ?? Button text ist dooof */
+}
+
+/* NACHSTER SCHRITT 
+margins im banner fixen
+abstände und alignment im footer fixen, kontaktfeld sollte ein größeres feld haben. Größen und abstände generell */
+
+
+/* when adding margin to a 100% big footer, then the window will be bigger than 100%. So I substract the value of the margin from the 100% to be able to add the margin */
