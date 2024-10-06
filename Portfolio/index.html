@@ -5,43 +5,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio S. Jana</title>
+    <link rel=" preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/svg+xml" href="Portfolio_pics/Logo_without_font.svg">
+    <link rel="icon" type="image/png" href="Portfolio_pics/Logo_without_font.png">
 </head>
 
 <body>
     <header>
         <div class="Name">
-            <h2>Stefanie Jana</h2>
-        </div>
-        <nav>
-
+            <img src="Portfolio_pics/Logo_with_font_250x49_noShadow.svg" alt="Logo: Stefanie Jana">
+            <!-- <nav>-->
             <ul>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="about_me.html">About me</a></li>
                 <li><a href="skills.html">Skills</a></li>
                 <li><a href="https://www.bc.fi/">BCH</a></li>
             </ul>
-        </nav>
-
-        <div class="banner">
-            <h1>Welcome to my Portfolio</h1>
+            <!-- </nav>-->
         </div>
-
+        <div class="banner">
+            <h1>Hello, I am Stefanie Jana. I am student of BCH to be a full-stack developer.</h1>
+            <button type="submit" name="viewProjects" class="projects">See my work</button>
+        </div>
     </header>
-    <!-- end of header -->
-
+    <!-- main -->
     <main>
-        <section class="bildLinks">
-            <h2>Projects</h2>
-            <div class="abschnitt">
-                <img src="IMG20240626115138.jpg" alt="archaeology">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio exercitationem omnis, ut ducimus
-                    magnam
-                    cum quisquam earum, incidunt eius consequuntur obcaecati delectus tempore nulla recusandae cumque
-                    perspiciatis, in eos enim.</p>
+        <section class="projekte">
+            <div class="projHeadline">
+                <h2>Projects</h2>
+            </div>
+            <div class="box">
+                <div class="inBox">
+                    <img src="IMG20240626115138.jpg" alt="projectPic1">
+                    <h3>Projekt 1 - Lorem ipsum.</h3>
+                </div>
+                <div class="inBox">
+                    <img src="IMG20240626115138.jpg" alt="projectPic2">
+                    <h3>Projekt 2 - Lorem ipsum.</h3>
+                </div>
+                <div class="inBox">
+                    <img src="IMG20240626115138.jpg" alt="projectPic3">
+                    <h3>Projekt 3 - Lorem ipsum.</h3>
+                </div>
             </div>
         </section>
 
@@ -74,52 +84,31 @@
 <footer>
     <div class="contactForm">
         <h1>Contact me</h1>
-        <form>
+        <form id="contactMe">
             <!-- id identifies the label, the name is for other things -->
-            <label for="yourname">Your name</label>
-            <input type="text" name="yourname" id="yourname"> <br>
-
-            <label for="email">Your Email</label>
-            <input type="email" name="email" id="email"> <br>
-
-
-            <label for="message">Message to me</label>
-            <input type="text" name="message" id="message"> <br>
-
-
-            <button type="submit">send message</button>
-
+            <div>
+                <label for="yourname">Your name</label>
+                <input type="text" name="yourname" id="yourname">
+            </div><br>
+            <div class="label">
+                <label for="email">Your Email</label>
+                <input type="email" name="email" id="email">
+            </div><br>
+            <div class="label">
+                <label for="message">Message to me</label>
+                <input type="text" name="message" id="message">
+            </div>
         </form>
+        <button type="submit">Send</button>
+
     </div>
-    <p>Copyright Steffi Jana 2024</p>
+    <div class="copyright">
+        <p>Copyright Steffi Jana 2024</p>
+    </div>
 </footer>
 
 </html>
 
 <!-- 
-HTML
-
-    Header with logo and nav
-    Nav with unordered lists and links
-    Main area with sections for hero-banner, projects, experience, skills
-    Hero-banner contains welcome text
-    Projects, experience and skills contain:
-        second-level heading
-        image
-        paragraph
-    Footer with copyrights
-
-CSS
-
-    Universal reset (* general)
-    Header background image
-    Floating images
-    Styling sections and footer
-
-    header = container mit allem drin, der das bild zeigt
-    call up an image in CSS: for background: background: url(bildname.img)
-    best inside .banner
-    plus background color
-    baner: 
 https://images.wallpapersden.com/image/download/minimal-hd-landscape_bWhsZ2WUmZqaraWkpJRmbmdlrWZlbWU.jpg
     -->

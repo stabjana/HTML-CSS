@@ -1,3 +1,15 @@
+:root {
+    --font: "Roboto Condensed", sans-serif;
+    --primary-col1: #15616D;
+    --primary-col2: #73A0A7;
+    --secondary-col1: #78290F;
+    --secondary-col2: #FF7D00;
+    --secondary-col3: #AE7F6F;
+    --neutral-col1: #001524;
+    --neutral-col2: #FFECD1;
+    --shadow-col: #333;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,68 +17,119 @@
 }
 
 body {
-    background-color: white;
-    color: black;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: var(--neutral-col1);
+    color: var(--neutral-col2);
+    font-family: var(--font);
 }
 
 header {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    color: var(--neutral-col2);
+
+    min-height: 100vh;
+    /* soll höher sein!!! (ganzer Bildschirm) */
     background: url(cintaku_6.jpg);
     background-size: cover;
     background-position: center;
+
 }
 
 .Name {
-    display: inline-block;
-    color: black;
-    padding-top: 50px;
-    min-height: 300px;
-    width: 100%;
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    font-weight: lighter;
+    align-items: top;
+    /* align-content: top; /* align-top */
+    justify-content: space-between;
+    margin: 5vh;
 }
 
-/* 
 
-TO DO! div name max height weg, margin dazu.
-div banner mergin dazu, bzw min height
-nav menüleiste ggf eine margin geben
+.Name,
+li {
+    position: sticky;
+}
 
-*/
 
+.Name>h2 {
+    align-content: center;
+
+}
 
 ul {
+    display: flex;
     list-style-type: none;
-    text-align: center;
-}
-
-li {
-    display: inline-block;
-    color: black;
 }
 
 li a {
     margin: 25px;
-    color: black;
-    font-family: 'Courier New', Courier, monospace;
     text-decoration: none;
-    display: block;
-      /* because its an inline item we need to give it a block element to be able to access the changeability */
+    color: var(--neutral-col2);
+    display: flex;
+    font-weight: lighter;
+    justify-content: space-between;
+    /* because its an inline item we need to give it a block element to be able to access the changeability --- changed to flex box */
 }
 
-li a:hover {
-    color: lightblue;
+li,
+.Name a:hover {
+    color: var(--primary-col2);
 }
 
 .banner {
+    display: flex;
+    flex: 1;
+    align-self: center;
+    margin-top: 25vh;
+    align-content: center;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    flex-direction: column;
+}
+
+.banner h1 {
     text-align: center;
-    padding: 100px 0;
-    width: 100%;
+}
+
+button {
+    background: var(--primary-col2);
+    color: var(--neutral-col2);
+    padding: 2%;
+    margin-bottom: 4%;
+    margin-top: 4%;
+    border-radius: 5px;
+    border: none;
+    width: 12%;
+    height: 2%;
+    font-size: 1vw;
+    /*     text-transform: uppercase; */
+}
+
+.banner button {
+    margin-top: 2%;
+    align-self: center;
+}
+
+main {
+    display: flex;
+    gap: 10%;
+    /* wo word das überschrieben?*/
+    flex-direction: column;
+}
+
+section {
+    margin-left: 25px;
+    margin-right: 25px;
+    padding: 25px 25px;
+    font-weight: 100;
 }
 
 section img {
     max-width: 30%;
-    height:fit-content;
+    height: fit-content;
+    max-height: 300px;
+    border-radius: 5px;
 }
 
 .abschnitt {
@@ -75,13 +138,103 @@ section img {
     padding: 20px 50px 100px 50px;
 }
 
-section {
-    margin: 25px;
-    padding: 25px 25px;
+.projekte {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
 }
 
-.bildRechts {
-    background-color: bisque;
+.box {
+    display: flex;
+    justify-content: center;
+    /* width: 100%; */
+    min-height: 30vh;
+    margin: 3% 50px;
+    gap: 7%;
+
+}
+
+h1,
+h2,
+h3 {
+    color: var(--primary-col2);
+}
+
+/* .text h1::after {
+    content: "";
+    height: 4px;
+    width: 0;
+    display: inherit;
+    background: var(--highlight);
+    transition: all 1s ease-in;
+}
+
+.text:hover h1::after {
+    width: 100%;
+} */
+
+/* if viewport is changing the boxes dont fit the heading and the margin. 
+
+AUS ANDERER DATEI
+
+#skills {
+    background: var(--dark-blue);
+    margin: 1rem 0;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#skills h2 {
+    color: white;
+}
+
+.card {
+    min-width: 150px;
+    max-width: 350px;
+    background: white;
+    color: black;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.card h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+*/
+.inBox {
+    display: flex;
+    flex-direction: column;
+    /*     border: 1px;
+    border-style: solid; */
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1vw;
+    border-radius: 5px;
+    box-shadow: 0 0 10px var(--shadow-col);
+}
+
+
+.inBox img {
+    flex: 1;
+    object-fit: contain;
+    align-self: center;
+    max-width: 100%;
+    height: fit-content;
+    margin: 10% 0;
+    border-radius: 5px;
+}
+
+.inBox h3 {
+    flex: 1;
+    margin-bottom: 10%;
 }
 
 section h2 {
@@ -92,22 +245,28 @@ section h2 {
     padding-left: 30px;
 }
 
+.bildRechts {
+    float: right;
+}
+
 .bildRechts p {
     padding-right: 30px;
 }
 
 footer {
-    background-color: black;
-    color: white;
-    width: calc(100%-50px);
-    margin: 25px;
+    background-color: var(--primary-col1);
+    color: var(--neutral-col2);
+    width: 50%;
+    margin: 0 25%;
+    padding: 32px;
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-    padding: 16px;
-} 
+    border-radius: 5px;
+    box-shadow: 0 0 10px var(--shadow-col);
 
-.contactForm {
-    margin: 50px auto;
+}
+
+form {
+    text-align: center;
 }
 
 .contactForm h1 {
@@ -115,42 +274,47 @@ footer {
 }
 
 label {
-    text-align: left;
-    font-size: 20px;
+    display: inline-block;
+    width: 45%;
+    text-align: right;
+    font-size: 1.5vh;
     color: #ffffff;
     margin-bottom: 5px;
     margin-right: 80px;
+    /*  margin-left: 20%; */
 }
 
-/* next the input boxes box model: limited the size of wrap area, then created padding inside of it and edited the space on the side. */
-
 input {
-    width: 30%;  /* Size is restricted, so we use 100%  */
-    margin-bottom: 20px;
-    padding: 10px; /* it adds up to 20px in each direction */
-    border: 1px, solid, #8f8f8f;
-    border-radius: 5px; 
+
+    width: 45%;
+    margin-bottom: 3%;
+    margin-right: 1rem;
+    padding: 10px;
+    /* it adds up to 20px in each direction  */
+    border: 1px, solid, var(--secondary-col2);
+    border-radius: 5px;
+    height: 5vh;
+}
+
+input[name="message"] {
+    height: 10vh;
 }
 
 .message text {
-    padding: 40px;
+    padding: 2%;
 }
 
-button {
-    background: coral;
-    color: white;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: none;
-    width: 10%;
-    text-transform: uppercase;
-   /* text-BLA  ?? Button text ist dooof */
+.copyright {
+    max-height: 1rem;
+    font-size: 1vw;
 }
 
-/* NACHSTER SCHRITT 
-margins im banner fixen
-abstände und alignment im footer fixen, kontaktfeld sollte ein größeres feld haben. Größen und abstände generell */
 
-
-/* when adding margin to a 100% big footer, then the window will be bigger than 100%. So I substract the value of the margin from the 100% to be able to add the margin */
+@media (min-width: 900px) {
+    label {
+        display: inline-block;
+        text-align: center;
+        width: 100px;
+        /* wie bekomme ich den text nach links oder mitte? */
+    }
+}
